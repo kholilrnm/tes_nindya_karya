@@ -65,14 +65,14 @@
           <!-- Email input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="form3Example3">Username</label>
-            <input type="text" id="form3Example3" name="username" class="form-control form-control-lg"
+            <input type="text" id="form3Example3" name="username" class="form-control form-control-lg" value="admin"
               placeholder="Masukkan Username" />
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-3">
               <label class="form-label" for="form3Example4">Password</label>
-              <input type="password" id="form3Example4" name="password" class="form-control form-control-lg"
+              <input type="password" id="form3Example4" name="password" class="form-control form-control-lg" value="admin"
                 placeholder="Masukkan password" />
           </div>
 
@@ -93,7 +93,7 @@
             {{-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                 class="link-danger">Register</a></p> --}}
           </div><br>
-        <p><span class="badge badge-danger">Data username dan password</span><br/>admin - 12345<br/>kasir - 12345<br/>s_admin - 12345</p>
+        {{-- <p><span class="badge badge-danger">Data username dan password</span><br/>admin - 12345<br/>kasir - 12345<br/>s_admin - 12345</p> --}}
 
         </form>
       </div>
@@ -103,7 +103,7 @@
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5" style="background-color: #424242">
     <!-- Copyright -->
     <div class="text-white mb-3 mb-md-0">
-      Made With ❤️ Kholil - Tes Proyek BGR Logistics 2022
+      Made With ❤️ Kholil - Tes PT Nindya Karya 2022
     </div>
     <!-- Copyright -->
 

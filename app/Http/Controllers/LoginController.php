@@ -16,32 +16,34 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $usr = $request->username;
-        $pwd = $request->password;
+        return redirect('home');
 
-        $user = MUserModel::where('username', $usr)->first();
-        if ($user) {
-            $check = Hash::check($pwd, $user->password);
-        } else {
-            return redirect()->back()->with(['message' => 'Username Tidak Ditemukan']);;
-        }
+        // $usr = $request->username;
+        // $pwd = $request->password;
 
-        if ($check) {
-            session()->put([
-                'isLogin' => true,
-                'nama' => $user->nama,
-                'idRole' => $user->id_role
-            ]);
-            if ($user->username == 'kasir') {
-                return redirect('order');
-            } else if ($user->username == 'admin') {
-                return redirect('stock');
-            } else {
-                return redirect('home');
-            }
-        } else {
-            return redirect()->back()->with(['message' => 'Password Tidak Sesuai']);;
-        }
+        // $user = MUserModel::where('username', $usr)->first();
+        // if ($user) {
+        //     $check = Hash::check($pwd, $user->password);
+        // } else {
+        //     return redirect()->back()->with(['message' => 'Username Tidak Ditemukan']);;
+        // }
+
+        // if ($check) {
+        // session()->put([
+        //     'isLogin' => true,
+        //     'nama' => $user->nama,
+        //     'idRole' => $user->id_role
+        // ]);
+        // if ($user->username == 'kasir') {
+        //     return redirect('order');
+        // } else if ($user->username == 'admin') {
+        //     return redirect('stock');
+        // } else {
+        //     return redirect('home');
+        // }
+        // } else {
+        //     return redirect()->back()->with(['message' => 'Password Tidak Sesuai']);;
+        // }
     }
 
     public function register()

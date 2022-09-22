@@ -21,7 +21,17 @@
                             <!-- Divider-->
                             <div class="drawer-menu-divider d-sm-none"></div>
                             <div class="drawer-menu-heading">Menu</div>
-                            @if (session('idRole') == 1)
+                            <a class="nav-link {{ (request()->is('home')) ? 'active' : '' }}" href="{{ url('home') }}">
+                                    <div class="nav-link-icon"><i class="material-icons">dashboard</i></div>
+                                    Dashboard
+                            </a>
+
+                            <a class="nav-link {{ (request()->is('pegawai')) ? 'active' : '' }}" href="{{ url('pegawai') }}">
+                                <div class="nav-link-icon"><i class="material-icons">description</i></div>
+                                Pegawai
+                            </a>
+
+                            {{-- @if (session('idRole') == 1)
                                 <a class="nav-link {{ (request()->is('order')) ? 'active' : '' }}" href="{{ url('order') }}">
                                     <div class="nav-link-icon"><i class="material-icons">description</i></div>
                                     Order
@@ -48,7 +58,7 @@
                                     <div class="nav-link-icon"><i class="material-icons">view_compact</i></div>
                                     Stock
                                 </a>
-                            @endif
+                            @endif --}}
                         </div>
                     </div>
                     <!-- Drawer footer        -->

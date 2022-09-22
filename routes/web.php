@@ -21,11 +21,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LoginController::class, 'index'])->name('signin');
 
 // kurang middleware
-Route::get('home', [DashboardController::class, 'index']);
-Route::get('order', [OrderController::class, 'index']);
-Route::get('stock', [StockController::class, 'index']);
-Route::post('getBarang', [OrderController::class, 'getBarang'])->name('getBarang');
-Route::post('tambahPesanan', [OrderController::class, 'tambahPesanan']);
+// Route::get('home', [DashboardController::class, 'index']);
+// Route::get('order', [OrderController::class, 'index']);
+// Route::get('stock', [StockController::class, 'index']);
+// Route::post('getBarang', [OrderController::class, 'getBarang'])->name('getBarang');
+// Route::post('tambahPesanan', [OrderController::class, 'tambahPesanan']);
+// Route::post('login', [LoginController::class, 'login']);
+// Route::get('register', [LoginController::class, 'register']);
+// Route::get('logout', [LoginController::class, 'logout']);
+
 Route::post('login', [LoginController::class, 'login']);
-Route::get('register', [LoginController::class, 'register']);
-Route::get('logout', [LoginController::class, 'logout']);
+Route::get('home', [DashboardController::class, 'index']);
+Route::get('pegawai', [DashboardController::class, 'pegawai']);
+Route::get('pegawai.edit', [DashboardController::class, 'pegawaiEdit'])->name('pegawai.edit');
+Route::post('pegawai.destroy', [DashboardController::class, 'pegawaiDestroy'])->name('pegawai.destroy');
